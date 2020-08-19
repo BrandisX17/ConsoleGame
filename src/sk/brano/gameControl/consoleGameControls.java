@@ -11,6 +11,7 @@ public class consoleGameControls implements GameControls{
     public String putPassword() {
         System.out.println("Fill in your password: ");
         String password = scanner.nextLine().trim();
+        //pattern to control the password ( a word with 3 - 8 chars long)
         Pattern pattern = Pattern.compile("\\w{3,8}");
         Matcher matcher = pattern.matcher(password);
         if (!matcher.matches()){
@@ -36,6 +37,7 @@ public class consoleGameControls implements GameControls{
     public int setTurnsCount() {
         System.out.println("Type number of turns: ");
         int numberOfTurns;
+        //check if the input is an int
         try{
             numberOfTurns = scanner.nextInt();
             scanner.nextLine();

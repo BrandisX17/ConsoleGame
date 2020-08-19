@@ -28,10 +28,12 @@ public class GamePlay {
     }
 
     private Hunter getHunter() {
+
         return new Hunter(150, 0, 25, 110);
     }
 
     private Warrior getWarrior() {
+
         return new Warrior(200, 0, 50, 50);
     }
 
@@ -40,6 +42,7 @@ public class GamePlay {
         characters[0] = playerA instanceof Warrior ? (Warrior)playerA : (Hunter)playerA;
         characters[1] = playerB instanceof Warrior ? (Warrior)playerB : (Hunter)playerB;
         for (int i = 0; i < numberOfTurns; i++) {
+            //modulo is to switch between the first and the second character
             int modulo = i%2;
             String move = gameControl.chooseMove(modulo == 0 ? "A" : "B");
             if (move.equalsIgnoreCase("A")){
