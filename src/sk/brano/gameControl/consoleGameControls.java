@@ -1,4 +1,9 @@
 package sk.brano.gameControl;
+
+import sk.brano.gameLogic.Game;
+import sk.brano.objects.Character;
+
+
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -60,11 +65,18 @@ public class consoleGameControls implements GameControls{
     }
 
     //todo
-/*    @Override
-    public String printGameResult(GamePlay game) {
-       System.out.printf("Game is over, the winner is player %s", game.GetWinner());
-     scanner.close();
+
+    @Override
+    public void printGameResult(Game game) {
+        this.printPlayerHealth(game.getPlayerA(),game.getPlayerB());
+
+
     }
 
- */
+    @Override
+    public void printPlayerHealth(Character playerA, Character playerB) {
+        System.out.println("Player A has" + playerA.getHealth());
+        System.out.println("Player B has" + playerB.getHealth());
+
+    }
 }

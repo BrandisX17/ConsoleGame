@@ -19,4 +19,8 @@ public class Hunter extends Character{
         int weaponHit = Utils.calculateWeaponHit(weapon.getDamage(), weapon.getSpeed());
         super.attack(character, weaponHit);
     }
+
+    public boolean block() {
+        return super.block();
+    }
 }

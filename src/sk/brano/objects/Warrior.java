@@ -21,7 +21,7 @@ public class Warrior extends Character{
         super.attack(character, weaponHit);
     }
 
-    public boolean block(Character character) {
+    public boolean block() {
         return super.block();
     }
 }
