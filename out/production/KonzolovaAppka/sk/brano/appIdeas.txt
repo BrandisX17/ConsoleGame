@@ -1,0 +1,20 @@
+Reading input from the console
+    - fill in password (check password)
+    - 2 players (pick a name for your player)
+    / roll a dice
+        - who goes first
+        - higher number (strength multiplier)
+    - how many turns
+
+Objects:
+!heroes     - health, strength, agility
+    Warrior - 200, 50, 50
+    Hunter   - 150, 40, 110
+!weapons - damage, speed
+
+Moves:
+  Attack
+  Block (usable only 2x in a row)
+  //Dodge
+
+- gameplay
